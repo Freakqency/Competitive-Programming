@@ -3,11 +3,9 @@
 using namespace std;
 
 int main(){
-    int t;
-    cin >> t;
+    int t; cin >> t;
     while (t--){
-        int start, end;
-        cin >> start >> end;
+        int start, end; cin >> start >> end;
         vector<int> res;
         for (int i = start; i <= end; i++){
             int flag = 0;
@@ -22,8 +20,7 @@ int main(){
                     res.push_back(i);
             flag = 0;
         }
-        for (int i : res)
-            cout << i << endl;
+        for (int i : res) cout << i << endl;
     }
     return 0;
 }

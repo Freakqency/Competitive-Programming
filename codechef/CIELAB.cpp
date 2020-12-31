@@ -4,8 +4,7 @@ using namespace std;
 
 int solve(int a, int b) {
     int c = a - b;
-    if (c % 10 == 9)
-        return c-1;
+    if (c % 10 == 9) return c-1;
     return c+1;
 }
 

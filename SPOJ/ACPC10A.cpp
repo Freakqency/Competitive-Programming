@@ -7,8 +7,7 @@ int main(){
         float n1, n2, n3;
         float ap = 0, gp = 0;
         cin >> n1 >> n2 >> n3;
-        if (n1 == 0 && n2 == 0 && n3 == 0)
-            break;
+        if (n1 == 0 && n2 == 0 && n3 == 0) break;
         if (2 * n2 == n1 + n3){
             float d = n2 - n1;
             ap = n3 + d;

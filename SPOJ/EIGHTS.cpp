@@ -7,8 +7,7 @@ using namespace std;
 string solve(ll k) {
     const char *vals[4] = {"192", "442", "692", "942"};
     string result = "";
-    if (k == 1 || k == 2 || k == 3 || k == 4)
-        return vals[k-1];
+    if (k == 1 || k == 2 || k == 3 || k == 4) return vals[k-1];
     if (k % 4 != 0) {
         ll div_val = k / 4;
         ll mod_val = k % 4;
