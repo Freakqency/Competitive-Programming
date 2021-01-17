@@ -6,8 +6,7 @@ int main(){
     int t; cin >> t;
     while (t--){
         int n; cin >> n;
-        vector<int> men;
-        vector<int> women;
+        vector<int> men, women;
         for (int i = 0; i < n; i++){
             int temp; cin >> temp;
             men.push_back(temp);
@@ -19,11 +18,9 @@ int main(){
         sort(men.begin(), men.end());
         sort(women.begin(), women.end());
         int sum = 0;
-
         for (int i = 0; i < n; i++){
             sum += men[i] * women[i];
         }
-
         cout << sum << endl;
     }
     return 0;

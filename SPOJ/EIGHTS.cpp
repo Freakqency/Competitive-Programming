@@ -19,7 +19,7 @@ string solve(ll k) {
         result += vals[3];
     }
     return result;
-    cout << "Hello World" << endl;
+    cout << "Hello World" << '\n';
 }
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
     int t; cin >> t;
     while (t--) {
         ll k; cin >> k;
-        cout << solve(k) << endl;
+        cout << solve(k) << '\n';
     }
     return 0;
 }

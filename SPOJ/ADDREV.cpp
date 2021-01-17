@@ -14,8 +14,7 @@ int get_reversed(int num){
 }
 
 int main(){
-    int n;
-    cin >> n;
+    int n; cin >> n;
     for (int i = 0; i < n; i++){
         int num1, num2; cin >> num1 >> num2;
         int rev1 = get_reversed(num1), rev2 = get_reversed(num2);

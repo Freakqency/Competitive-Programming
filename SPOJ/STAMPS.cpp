@@ -8,11 +8,9 @@ string solve(int n, int k, vector<int> arr) {
     for (int i = 0; i < (int) arr.size(); i++) {
         sum += arr[i];
         result++;
-        if (sum >= k)
-            break;
+        if (sum >= k) break;
     }
-    if (sum >= k)
-        return to_string(result);
+    if (sum >= k) return to_string(result);
     return "impossible";
 }
 
@@ -22,8 +20,7 @@ int main() {
     for (int i = 1; i <= t; i++) {
         int k, n; cin >> k >> n;
         vector<int> arr(n, 0);
-        for (int j = 0; j < n; j++)
-            cin >> arr[j];
+        for (int j = 0; j < n; j++) cin >> arr[j];
         string out = "Scenario #";
         out += to_string(i);
         out += ':';

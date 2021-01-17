@@ -18,8 +18,7 @@ string solve(int arr[], int n) {
             }
         }
     }
-
-
+    return "No";
 }
 
 int main() {

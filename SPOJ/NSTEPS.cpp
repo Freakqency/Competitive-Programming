@@ -16,4 +16,5 @@ int main(){
         else
             cout << "No Number" << endl;
     }
+    return 0;
 }

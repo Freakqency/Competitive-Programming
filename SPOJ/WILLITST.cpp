@@ -5,15 +5,12 @@ using namespace std;
 #define ll long long
 
 int countSetBits(ll n) {
-    if (n == 0)
-        return 0;
-    else 
-        return 1 + countSetBits(n & (n - 1));
+    if (n == 0) return 0;
+    else return 1 + countSetBits(n & (n - 1));
 }
 
 string solve(ll n) {
-    if (countSetBits(n) == 1)
-        return "TAK";
+    if (countSetBits(n) == 1) return "TAK";
     return "NIE";
 }
 
