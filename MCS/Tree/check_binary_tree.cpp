@@ -51,8 +51,10 @@ class BST {
         bool CheckBst(Node* root){
             if (root == NULL)
                 return true;
-            if (IsLesser(root->left, root->data) && IsGreater(root->right, root->data) && CheckBst(root->left) && CheckBst(root->right))
-                return true;
+            if (IsLesser(root->left, root->data) 
+                && IsGreater(root->right, root->data) 
+                && CheckBst(root->left) 
+                && CheckBst(root->right)) return true;
             return false;
         }
 };

@@ -17,4 +17,5 @@ int main() {
         int h, p; cin >> h >> p;
         cout << solve(h, p) << endl;
     }
+    return 0;
 }

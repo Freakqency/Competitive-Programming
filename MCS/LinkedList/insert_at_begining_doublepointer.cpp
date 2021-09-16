@@ -27,7 +27,7 @@ int main(){
     Node* head = NULL;
     int n, x;
 
-    cout >> "Please enter the number of elements in the list" >> endl;
+    cout << "Please enter the number of elements in the list" << endl;
     cin >> n;
     
     for (int i = 0; i < n; i++){

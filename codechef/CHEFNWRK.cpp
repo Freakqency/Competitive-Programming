@@ -6,8 +6,7 @@ int solve(int arr[], int n, int k) {
     for (int i = 0; i < n; i++) 
         if (arr[i] > k)
             return -1;
-    int trips = 1;
-    int sumVal = 0;
+    int trips = 1, sumVal = 0;
     for (int i = 0; i < n; i++) {
         sumVal += arr[i];
         if (sumVal > k) {

@@ -22,4 +22,5 @@ int main() {
         else
             low = mid + 1;
     }
+    return 0;
 }

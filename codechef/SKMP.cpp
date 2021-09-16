@@ -36,11 +36,9 @@ string solve(string str, string pat) {
 }
 
 int main() {
-    int t;
-    cin >> t;
+    int t; cin >> t;
     while (t--) {
-        string str, pat;
-        cin >> str >> pat;
+        string str, pat; cin >> str >> pat;
         cout << solve(str, pat) << endl;
     }
     return 0;

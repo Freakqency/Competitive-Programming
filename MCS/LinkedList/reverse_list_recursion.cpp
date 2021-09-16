@@ -17,9 +17,7 @@ void Print(Node* head){
 }
 
 void Print_Reverse(Node* head){
-    if (head == NULL){
-        return;
-    }
+    if (head == NULL) return;
     Print_Reverse(head->next);
     cout << head->data;
 }

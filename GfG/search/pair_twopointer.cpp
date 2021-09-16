@@ -18,4 +18,5 @@ int main() {
         else
             l++;
     }
+    return 0;
 }

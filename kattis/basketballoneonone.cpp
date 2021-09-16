@@ -10,8 +10,7 @@ char solve(string str) {
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);    
-    string str;
-    cin >> str;
+    string str; cin >> str;
     cout << solve(str) << '\n';
     return 0;
 }

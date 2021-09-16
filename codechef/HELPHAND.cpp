@@ -13,9 +13,7 @@ int lcm(int a, int b) {
 }
 
 int solve(int n) {
-    int arr[n];    
-    int val = n;
-    int count = 0;
+    int arr[n], val = n, count = 0;
     for (int i = 0; i < n; i++){
         arr[i] = val;
         val--;

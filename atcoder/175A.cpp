@@ -5,10 +5,8 @@ using namespace std;
 int solve(string str) {
     int r = 0, res = 0;
     for (int i = 0; i < (int) str.length(); i++) {
-        if (str[i] == 'R')
-            r++;
-        else 
-            r = 0;
+        if (str[i] == 'R') r++;
+        else r = 0;
         res = max(res, r);
     }
     return res;

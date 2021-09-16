@@ -21,4 +21,5 @@ int main(){
         memo.clear();
         cout << compute(n, memo) << endl;
     }
+    return 0;
 }
