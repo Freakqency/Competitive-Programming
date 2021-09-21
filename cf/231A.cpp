@@ -12,5 +12,6 @@ int main() {
         if (cnt >= 2) res++;
     }
     cout << res << '\n';
+    std::vector<int> v(n, 0)
     return 0;
 }
