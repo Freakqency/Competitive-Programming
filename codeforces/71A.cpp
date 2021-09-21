@@ -2,24 +2,20 @@
 
 using namespace std;
 
-string solve(string str) {
-    int n = str.length();    
-    string res = "";
-    if (n > 10) {
-        res += str[0];
-        res += to_string(n - 2);
-        res += str[n - 1];
-        return res;
-    }    
-    return str;
-}
-
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);    
-    int t; cin >> t;
-    while (t--) {
-        string str; cin >> str;        
-        cout << solve(str) << endl;
+    int n; cin >> n;
+    while (n--) {
+        string str; cin >> str;
+        int m = str.size();
+        if (m > 10) {
+            string res = "";
+            res += str[0]; 
+            res += to_string(m - 2);
+            res += str[m - 1];
+            cout << res << '\n';
+        }
+        else cout << str << '\n' ;
     }
     return 0;
 }
