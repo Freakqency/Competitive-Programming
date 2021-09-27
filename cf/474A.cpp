@@ -5,14 +5,19 @@ using namespace std;
 string solve(char d, string str) {
 	string keys = "qwertyuiopasdfghjkl;zxcvbnm,./", res = "";
 	int n = keys.size();
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < (int) str.size(); i++) {
 		if (d == 'R') {
-			int idx = keys.find(str[i]) + 1;
-			if (idx == n + 1) idx = 0;
+			int idx = keys.find(str[i]) - 1;
+			if (idx == -1) idx = n - 1;
+			res += keys[idx];
 		}
 		else if (d == 'L') {
+			int idx = keys.find(str[i]) + 1;
+			if (idx == n) idx = 0;
+			res += keys[idx];
 		}
 	}
+	return res;
 }
 
 int main() {
