@@ -22,7 +22,7 @@ int main() {
 			res = "Oh, my keyboard!";
 			break;
 		}
-	}
+	
 	cout << res << '\n';
 	return 0;
 }
