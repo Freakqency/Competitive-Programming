@@ -3,21 +3,14 @@
 using namespace std;
 
 string solve(int n, vector<vector<char>> arr) {
-	char to_compare = arr[0][0], other;
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < n; j++) {
-			if (i != j && (i + j) != (n - 1)) {
-				other = arr[i][j];
-				break;
-			}
-		}
-	for (int i = 0; i < n; i++)
-		for (int j = 0; j < n; j++) {
-			if (i == j && to_compare != arr[i][j]) return "NO";
-			if (i + j == n - 1 && to_compare != arr[i][j]) return "NO";
-			if (i != j && (i + j) != (n - 1) && arr[i][j] != other) return "NO";
-		}
-	return "YES";
+    set<char> s1, s2;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j || j == n - 1 - i) s1.insert(arr[i][j]);
+            else s2.insert(arr[i][j]);
+        }
+    }
+    return (s1 != s2 && s1.size() == 1 && s2.size() == 1) ? "YES" : "NO";
 }
 
 int main() {
