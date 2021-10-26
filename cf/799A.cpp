@@ -2,13 +2,15 @@
 
 using namespace std;
 
-string solve(int n, int t, int k, int d) {
-    int tot = (n / k) * t;
-}
-
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(NULL);    
+    ios_base::sync_with_stdio(false); cin.tie(NULL);
     int n, t, k, d; cin >> n >> t >> k >> d;
-    cout << solve(n, t, k, d) << '\n';
+    int curt = 0;
+    while (curt <= d) {
+        n -= k;
+        curt += t;
+    }
+    if (n > 0) cout << "YES" << '\n';
+    else cout << "NO" << '\n';
     return 0;
 }

@@ -3,18 +3,11 @@
 using namespace std;
 
 string solve(int n, int k) {
-    string res = "";
-    for (int i = 0; i < n; i++) res += ((i - 'a') % 26 ) + 'a';
-    transform(res.begin(), res.end(), res.begin(), ::tolower);
-    if (n - k > 0) {
-        string to_replace = "";
-        int j = 0;
-        for (int i = 0; i < k; i++) to_replace += res[i];
-        for (int i = k; i < n; i++) {
-            res[i] = to_replace[j++ % k];
-            // j = (j + 1 > k) ?  (j + 1) % k : j + 1;
-        }
-    }
+    string char_set = "", res = "";
+    int rem = n % k, quo = n / k;
+    for (int i = 97; i < 97 + k; i++) char_set += char(i);
+    for (int i = 0; i < quo; i++) res += char_set;
+    for (int i = 0; i < rem; i++) res += char_set[i];
     return res;
 }
 
