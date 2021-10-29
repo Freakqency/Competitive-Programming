@@ -2,19 +2,30 @@
 
 using namespace std;
 
+#define ll long long
+
+void solve(ll n, ll m, ll a, ll d) {
+    vector<ll> nums{a, (a + d), (a + (2 * d)), (a + (3 * d)), (a + (4 * d))};
+    ll subsets = (1 << 5) - 1;
+    ll ans = 0;
+    for (ll i = 1; i <= subsets; i++) {
+        ll denom = 1ll;
+        ll setbits = __builtin_popcount(i);
+        for (ll j = 0; j <= 4; j++) {
+            if (i & (1 << j)) denom = denom * nums[j];
+        }
+        if (setbits % 2 == 0) ans += n / denom;
+        else ans -= n / denom;
+    }
+    cout << ans << '\n';
+}
+
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t; cin >> t;
+    ll t; cin >> t;
     while (t--) {
-        int n, m, a, d; cin >> n >> m >> a >> d;
-        int cnt = 0;
-        for (int i = n; i <= m; i++) {
-            if (i % a != 0 && i % (a + d) && i % (a + (2 * d)) != 0 
-                    && i % (a + (3 * d)) != 0 && i % (a + (4 * d) != 0)) 
-                cnt++;
-        }
-        cout << cnt << '\n';
+        ll n, m, a, d; cin >> n >> m >> a >> d;
+        solve(n, m, a, d);
     }
     return 0;
-
 }
