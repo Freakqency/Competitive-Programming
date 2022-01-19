@@ -11,7 +11,7 @@ string solve(int arr[], int n) {
                 h++;
         }
     }
-    if (h == n+1) l = h = h - 1;
+    if (h == n + 1) l = h = h - 1;
     string res;
     res += to_string(l);
     res += ' ';

@@ -15,7 +15,7 @@ int main() {
     int t; cin >> t;
     while (t--) {
         ll n; cin >> n;
-        vector<ll> arr(n, 0);
+        vector<ll> arr(n);
         for (ll i = 0; i < n; i++) cin >> arr[i];
         cout << solve(arr, n) << endl;
     }

@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <vector>
 
 using namespace std;
 
@@ -34,8 +33,7 @@ int main() {
     ll n, m; cin >> n >> m;
     vector<vector<ll>> arr(n, vector<ll>(m));
     for (ll i = 0; i < n; i++) {
-        for (ll j = 0; j < m; j++) 
-            cin >> arr[i][j];
+        for (ll j = 0; j < m; j++) cin >> arr[i][j];
     }
     cout << solve(n, m, arr) << '\n';
     return 0;

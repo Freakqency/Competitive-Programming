@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    string str; cin >> str;
+    int A = 0, B = 0, n = str.size();
+    for (int i = 0; i < n; i++) {
+        if (i + 1 < n) {
+            if (str[i] == 'A') A += str[i + 1] - '0';
+            else if (str[i] == 'B') B += str[i + 1] - '0';
+        }
+    cout << A << '\n';
+    cout << B << '\n';
+    }
+    return 0;
+}

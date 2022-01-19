@@ -65,13 +65,13 @@ CLEAN_TARGETS += $(PCH)
 $(PCH)/%.gch:
 	rm -f $@
 	mkdir -p $(dir $@)
-	$(LINK.cpp) -x c++-header "$$(echo '#include<$*>' | $(LINK.cpp) -H -E -x c++ - 2>&1 >/dev/null | head -1 | cut -d ' ' -f2)" -o $@
+	$(LINK.cpp) -x c++-header "$$(echo '#include<$*>' | $(LINK.cpp) -H -E -x c++ - 2>&1 >/dev/null | head -1 | cut -d ' ' -f2)" -o ./build/$@
 .PRECIOUS: $(PCH)/%.gch
 
 %: %.cpp # Cancel the builtin rule
 
 %: %.cpp $(patsubst %,$(PCH)/%.gch,$(PRECOMPILE_HEADERS))
-	$(LINK.cpp) -isystem $(PCH) $< $(LOADLIBES) $(LDLIBS) -o $@
+	$(LINK.cpp) -isystem $(PCH) $< $(LOADLIBES) $(LDLIBS) -o ./build/$@
 .PRECIOUS: %
 
 

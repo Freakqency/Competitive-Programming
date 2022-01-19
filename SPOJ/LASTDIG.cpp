@@ -21,4 +21,5 @@ int main(){
         ll value = power(a, b);
         cout << value << endl;
     }
+    return 0;
 }
