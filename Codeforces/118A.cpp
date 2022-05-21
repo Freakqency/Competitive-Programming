@@ -4,21 +4,17 @@ using namespace std;
 
 string solve(string str) {
     int n = str.size();
+    string res = "";
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
     for (int i = 0; i < n; i++) {
-        if (str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O'
-                || str[i] == 'U' || str[i] == 'a' || str[i] == 'e' ||
-                str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
-                str[i] == 'Y' || str[i] == 'y') str[i] = '0';
-    }
-    string cons = "";
-    for (int i = 0; i < n; i++) {
-        if (str[i] != '0') {
-            cons += '.';
-            cons += str[i];
+        if (str[i] != 'a' && str[i] != 'o' && str[i] != 'y' && str[i] != 'e'
+                && str[i] != 'u' && str[i] != 'i') {
+            res += '.';
+            res += str[i];
         }
     }
-    transform(cons.begin(), cons.end(), cons.begin(), ::towlower);
-    return cons;
+    transform(res.begin(), res.end(), res.begin(), ::tolower);
+    return res;
 }
 
 int main() {
